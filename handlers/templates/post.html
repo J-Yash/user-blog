@@ -1,0 +1,46 @@
+      <center>
+        <h2>
+          <u><a href="/blog/{{p.key().id()}}">{{p.subject}}</a></u>
+          <br>
+        </h2>
+        <h5>
+          <b>{{p.created.strftime("%b %d, %Y")}}</b>
+        <h5>
+        <br><br>
+        <p>{{p._render_text | safe}}</p>
+        <br>
+        <br>
+        <b>
+          <i>
+            <a class="btn btn-info btn-xs" href="/blog/editpost/{{p.key().id()}}">Edit Post</a>
+            <a class="btn btn-danger btn-xs" href="/blog/deletepost/{{p.key().id()}}">Delete Post</a>
+            <a class="btn btn-success btn-xs" href="/blog/likepost/{{p.key().id()}}">Like </a> {{count}}
+          </i>
+        </b>
+        <br>
+        <br>
+        <form class="form-inline" method="post" action="/blog/addcomment/{{p.key().id()}}">
+          <div class="form-group">
+            <input class="form-control" type="text" name="comment" value="" required="">
+            <input class="btn btn-warning btn-sm" type="submit" value="Add Comment">
+          </div>
+        </form>
+        <br>
+        {% for c in comment %}
+        <div class="comment">
+          <b>
+            <i>{{c.comment | safe}} </i>
+          </b>
+          -commented  by
+          <b>
+            {{p.get_username_from_id(c.user_id)}}
+          </b>
+        </div>
+        <br>
+        <a class="btn btn-primary btn-xs" href="/blog/editcomment/{{c.key().id()}}">Edit Comment</a>{{errorcomment}}
+        <a class="btn btn-danger btn-xs" href="/blog/deletecomment/{{c.key().id()}}">Delete Comment</a>
+        <br>
+        <br>
+        {% endfor %}
+    </center>
+    <hr>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>New Post</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="header">
+                <h1>User Blog</h1>
+            </div>
+            <div class="content">
+                <a class="logout btn btn-sm btn-danger" href="/logout">Logout</a><br>
+                <center>
+                <h3>
+                    <u>All Blog Posts</u>
+                </h3>
+                <b>
+                    <i>
+                        <a class="btn btn-info btn-sm" href="/blog/newpost">New Post</a>
+                    </i>
+                </b>
+                <br>
+                <hr>
+                <br>
+                {% for p in posts %}
+                {{p.render() | safe}}
+                 <br>
+                 <br>
+                {% endfor %}
+                 <br>
+                </center>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </body>
+</html>

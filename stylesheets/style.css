@@ -1,0 +1,110 @@
+.container-fluid{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header{
+    min-height: 100px;
+    height: 20%;
+    width: 100%;
+    background-color: #ADFF2F;
+    text-align: center;
+    font-style: italic ;
+    font-family: Comic Sans MS;
+
+
+}
+.content{
+    width: 100%;
+    min-height: 770px;
+    max-height: 70%;
+    background-image: url(background1.jpg) ;
+    padding-top: 30px;
+}
+
+.footer{
+    width: 100%;
+    min-height: 70px;
+    max-height: 10%;
+    background-color:   #ADFF2F;
+}
+
+.indexlink{
+
+    font-size: 1.8em;
+
+
+}
+
+.indexlinksdiv{
+    padding-top: 500px;
+}
+
+.header h1{
+    padding-top: 1%;
+}
+
+.form-group{
+    max-width: 20%;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-style: italic;
+}
+.content h3{
+    font-family: Comic Sans MS;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 2.5em;
+}
+
+.content h2 {
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-style: italic ;
+    font-size: 2.0em;
+    text-decoration: none;
+}
+
+.content p {
+
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.comment{
+    font-size: 1.1em;
+
+}
+
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr:after {
+    content: "§§§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.8em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+.logout{
+    float: right;
+    margin-right: 1%;
+
+}
+
+.error{
+    font-size: 1.1em;
+    font-weight: bolder;
+    font-style: italic;
+    color: red;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Edit Comment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="header">
+                <h1>User Blog</h1>
+            </div>
+            <div class="content">
+                <a class="logout btn btn-sm btn-danger" href="/logout">
+                    Logout
+                </a>
+                <br>
+                <center>
+                    <b>
+                        <i>
+                            <a href="/blog">Go to all posts</a>
+                        </i>
+                    </b>
+                    <br>
+                    <h3>Edit Comment</h3>
+                    <form method="post" action="/blog/editcomment/{{comment.key().id()}}">
+                        <div class="form-group">
+                            Comment: <textarea class="form-control" name="comment" rows="5" cols="20" required="">{{comment.comment}}</textarea>
+                            <br>
+                            <br>
+                            <input class="btn btn-success" type="submit" value="Post">
+                        </div>
+                    </form>
+                    <br>
+                    <div class="error">
+                        {{error}}
+                    </div>
+                    <br>
+                </center>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </body>
+</html>

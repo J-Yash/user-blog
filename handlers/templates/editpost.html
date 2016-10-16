@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Edit Post</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="header">
+                <h1>User Blog</h1>
+            </div>
+            <div class="content">
+                <a class="logout btn btn-sm btn-danger" href="/logout">
+                    Logout
+                </a>
+                <br>
+                <center>
+                    <b>
+                        <i>
+                            <a href="/blog">
+                                View all posts
+                            </a>
+                        </i>
+                    </b>
+                    <h3>Edit Post</h3>
+                    <form method="post" action="/blog/editpost/{{post.key().id()}}">
+                        <div class="form-group">
+                            Subject: <input class="form-control" type="text" name="subject" value="{{post.subject}}" required="">
+                            <br>
+                            <br>
+                            Content: <textarea class="form-control" name="content" rows="5" cols="20" required="">{{post.content}}</textarea>
+                            <br>
+                            <br>
+                            <input class="btn btn-info" type="submit" value="Save Changes">
+                            <a class="btn btn-danger" href="/blog/{{post.key().id()}}">Cancel</a>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="error">
+                        {{error}}
+                    </div>
+                    <br>
+                </center>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </body>
+</html>
