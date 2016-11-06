@@ -15,4 +15,3 @@ What to do in the app:
     5) In case entered data is not visible, just reload the page
 
 
-----> Some Helper functions have been used from Steve Huffman's code in the "Intro to Backend" course.
