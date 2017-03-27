@@ -1,5 +1,5 @@
 Required Software Components:
-    -->Install Google App Engine SDK for Python and aadd it to PATH variable
+    -->Install Google App Engine SDK for Python and add it to PATH variable
     -->Python 2.7
 
 How to run:
